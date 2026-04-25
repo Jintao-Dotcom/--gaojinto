@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高锦涛 - 个人作品集</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        @layer utilities {
+            .card-hover {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-indigo-600">高锦涛</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-indigo-600">首页</a>
+                    <a href="#about" class="text-gray-700 hover:text-indigo-600">关于我</a>
+                    <a href="#cases" class="text-gray-700 hover:text-indigo-600">案例</a>
+                    <a href="#skills" class="text-gray-700 hover:text-indigo-600">技能</a>
+                    <a href="#contact" class="text-gray-700 hover:text-indigo-600">联系我</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="bg-gradient-to-br from-indigo-600 to-purple-600 min-h-screen flex items-center justify-center text-white">
+        <div class="text-center px-4">
+            <h1 class="text-5xl font-bold mb-4">你好，我是高锦涛</h1>
+            <p class="text-2xl mb-8 opacity-90">产品经理 | 财务信息化</p>
+            <div class="w-40 h-40 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
+                <img src="https://picsum.photos/300/300" alt="头像" class="w-full h-full object-cover">
+            </div>
+            <p class="text-xl max-w-2xl mx-auto mb-10">
+                不想做产品的会计不是一个好的创作者<br>
+                一个爱折腾，好奇心强，喜欢跨界的产品、会计、作者
+            </p>
+            <a href="#cases" class="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold inline-flex items-center gap-2 hover:bg-gray-100">
+                <i class="fa fa-rocket"></i> 查看作品
+            </a>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-16">关于我</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-blue-50 p-6 rounded-xl shadow-md card-hover">
+                    <i class="fa fa-calculator text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">财务人</h3>
+                    <p class="text-gray-600">糟过核算、预算、资金全模块的毒打，熟悉财务全链路业务场景。</p>
+                </div>
+                <div class="bg-indigo-50 p-6 rounded-xl shadow-md card-hover">
+                    <i class="fa fa-sitemap text-4xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">财务信息化</h3>
+                    <p class="text-gray-600">主导业财一体化系统落地，需求搜集、方案评审，陪项目一起上线。</p>
+                </div>
+                <div class="bg-purple-50 p-6 rounded-xl shadow-md card-hover">
+                    <i class="fa fa-robot text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">AI产品玩家</h3>
+                    <p class="text-gray-600">深耕AI智能客服、智能流水认领，倒反天罡，我推着领导和业务一起走。</p>
+                </div>
+                <div class="bg-pink-50 p-6 rounded-xl shadow-md card-hover">
+                    <i class="fa fa-pencil text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">小说爱好者</h3>
+                    <p class="text-gray-600">业余创作短篇小说被改编短剧，播放量达2000万+，擅长从用户视角洞察需求。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 案例 -->
+    <section id="cases" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-4">案例</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="cases-grid">
+                <!-- 动态生成 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-4">技能</h2>
+            <p class="text-center text-gray-500 mb-12">我的技术栈与工具能力</p>
+            <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                    <i class="fa fa-code text-3xl text-blue-500 mb-2"></i>
+                    <h3 class="font-semibold">RPA开发</h3>
+                    <p class="text-sm text-gray-500">影刀RPA高级认证</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                    <i class="fa fa-android text-3xl text-green-500 mb-2"></i>
+                    <h3 class="font-semibold">AI智能体</h3>
+                    <p class="text-sm text-gray-500">Coze / 大模型应用</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                    <i class="fa fa-line-chart text-3xl text-emerald-500 mb-2"></i>
+                    <h3 class="font-semibold">财务分析</h3>
+                    <p class="text-sm text-gray-500">中级会计职称</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                    <i class="fa fa-pencil-square text-3xl text-red-500 mb-2"></i>
+                    <h3 class="font-semibold">产品设计</h3>
+                    <p class="text-sm text-gray-500">需求分析 / PRD撰写</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                    <i class="fa fa-database text-3xl text-yellow-500 mb-2"></i>
+                    <h3 class="font-semibold">数据自动化</h3>
+                    <p class="text-sm text-gray-500">Python / VBA基础</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-lg text-center card-hover">
+                    <i class="fa fa-users text-3xl text-indigo-500 mb-2"></i>
+                    <h3 class="font-semibold">用户洞察</h3>
+                    <p class="text-sm text-gray-500">跨界内容创作经验</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-indigo-600/90 to-purple-600/90 text-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">联系我</h2>
+            <p class="mb-8 opacity-90">期待与您一起探索财务自动化的更多可能</p>
+            <div class="flex flex-wrap justify-center gap-6 mb-10">
+                <a href="mailto:1012214098@qq.com" class="flex items-center gap-2 bg-white/10 px-6 py-3 rounded-full hover:bg-white/20">
+                    <i class="fa fa-envelope text-xl"></i>
+                    <span>1012214098@qq.com</span>
+                </a>
+                <a href="tel:17681540950" class="flex items-center gap-2 bg-white/10 px-6 py-3 rounded-full hover:bg-white/20">
+                    <i class="fa fa-phone text-xl"></i>
+                    <span>176-8154-0950</span>
+                </a>
+            </div>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/30"><i class="fa fa-github"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/30"><i class="fa fa-linkedin"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/30"><i class="fa fa-weixin"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="cases-data.js"></script>
+    <script>
+        // 渲染案例卡片
+        function renderCases() {
+            const grid = document.getElementById('cases-grid');
+            grid.innerHTML = cases.map(c => `
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                    <div class="h-48 overflow-hidden">
+                        <img src="${c.image}" alt="${c.title}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3 flex-wrap">
+                            ${c.tags.map(t => `<span class="px-3 py-1 bg-indigo-50 text-indigo-600 text-xs rounded-full">${t}</span>`).join('')}
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">${c.title}</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">${c.overview}</p>
+                        <a href="case-detail.html?id=${c.id}" class="text-indigo-600 font-medium inline-flex items-center gap-1 hover:underline">
+                            查看详情 <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // 初始化
+        renderCases();
+    </script>
+</body>
+</html>
